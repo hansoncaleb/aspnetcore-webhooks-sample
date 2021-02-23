@@ -74,8 +74,10 @@ namespace GraphWebhooks_Core.Controllers
 
             try
             {
+                string userId = "75a38a5f-cec2-4947-ac51-f45a18fb17a3";
+                string tenantId = "3453fef6-b923-4898-adaf-05a863a0f5fb";
                 // Create a subscription.
-                var newSubscription = await CreateSubscription(string.Empty, string.Empty, clientState, true).ConfigureAwait(false);
+                var newSubscription = await CreateSubscription(userId, tenantId, clientState, true).ConfigureAwait(false);
                 return View("Subscription", newSubscription);
             }
             catch (Exception e)
